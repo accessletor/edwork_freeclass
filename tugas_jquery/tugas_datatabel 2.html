@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contoh Tabel dengan jQuery</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+</head>
+<body>
+
+	<table id="table-data">
+		<thead>
+			<tr>
+				<th>Nama</th>
+				<th>Pekerjaan</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Asep</td>
+				<td>Mahasiswa</td>
+				<td>Aktif</td>
+			</tr>
+			<tr>
+				<td>Adi</td>
+				<td>Mahasiswa</td>
+				<td>Aktif</td>
+			</tr>
+			<tr>
+				<td>Agung</td>
+				<td>Mahasiswa</td>
+				<td>Tidak Aktif</td>
+			</tr>
+			<tr>
+				<td>Bagas</td>
+				<td>Mahasiswa</td>
+				<td>Aktif</td>
+			</tr>
+			<tr>
+				<td>Herdi</td>
+				<td>Mahasiswa</td>
+				<td>Tidak Aktif</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+	<script>
+		$(document).ready(function() {
+  // Inisialisasi tabel
+  const table = $('#table-data').DataTable();
+  
+  // Pencarian
+  $('#search-input').on('keyup', function() {
+  	table.search($(this).val()).draw();
+  });
+  
+  // Filter
+  $('#filter-select').on('change', function() {
+  	table.columns(1).search($(this).val()).draw();
+  });
+});
+</script>
+</body>
+</html>

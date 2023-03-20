@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+	<style>
+		table {
+			border: 1px solid black;
+			width: 500px;
+		}
+		th,td {
+			padding: 10px;
+			text-align: center;
+			border: 1px solid black;
+			margin: 0;
+		}
+		.judul {
+			background-color: #4a8af0;
+			color: white;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<table id="table-data">
+		<thead>
+			<tr class="judul">
+				<th>Nama</th>
+				<th>Umur</th>
+				<th>Alamat</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script>
+		$(document).ready(function() {
+			const data = [
+			{nama: "Asep", umur: 22, alamat: "Dukupuntang"},
+			{nama: "Agus", umur: 25, alamat: "Dukupuntang"},
+			{nama: "Wahid", umur: 35, alamat: "Dukupuntang"},
+			{nama: "Adi", umur: 28, alamat: "Kuningan"},
+			];
+  // Menambahkan baris ke dalam tabel
+  $.each(data, function(index, value) {
+  	const row = $('<tr>');
+  	$('<td>').html(value.nama).appendTo(row);
+  	$('<td>').html(value.umur).appendTo(row);
+  	$('<td>').html(value.alamat).appendTo(row);
+  	row.appendTo('#table-data tbody');
+  });
+});
+
+</script>
+</body>
+</html>

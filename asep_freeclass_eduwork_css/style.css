@@ -1,0 +1,93 @@
+body{
+	font-family: sans-serif;
+	background: #eee;
+}
+
+h1{
+	text-align: center;
+	/*ketebalan font*/
+	font-weight: 300;
+}
+
+.tulisan_login{
+	text-align: center;
+	/*membuat semua huruf menjadi kapital*/
+	text-transform: uppercase;
+}
+
+.kotak_login{
+	width: 350px;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 80px auto;
+	padding: 30px 20px;
+}
+.forger-text {
+	position: relative;
+}
+.forger-text a {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	color: #003569;
+	font-size: 14px;
+	text-decoration: none;
+	font-family: "Overpass Mono", monospace;
+	letter-spacing: -1px;
+}
+label{
+	font-size: 11pt;
+}
+
+.form_login{
+	/*membuat lebar form penuh*/
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 11pt;
+	margin-bottom: 20px;
+}
+.gambar {
+	height: 80px;
+	width: 200px;
+	margin: auto;
+	position: relative;
+	left: 70px;
+}
+.tombol_login{
+	background: #3a7ae0;
+	color: white;
+	font-size: 11pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+}
+
+.link{
+	color: #232323;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+.sign-up {
+	text-align: center;
+	font-family: "Overpass Mono", monospace;
+	word-spacing: -3px;
+	letter-spacing: -2px;
+	font-weight: normal;
+}
+.sign-up a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #3897f0;
+	font-family: "Overpass Mono", monospace;
+	word-spacing: -3px;
+	letter-spacing: -2px;
+	font-weight: normal;
+}
+input:focus {
+	background-color: rgba(107, 107, 107, 0.178);
+	outline: none;
+	border: 2px solid black;
+}

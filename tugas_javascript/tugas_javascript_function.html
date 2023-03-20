@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=	, initial-scale=1.0">
+	<title>tugas javascript 1</title>
+</head>
+<body>
+	<h1>menampilkan beberapa function dengan parameter menggunakan javascript</h1>
+	<!--decklaration function-->
+	<button onclick="tambah()">Tambahkan</button>
+	<!--expresion function-->
+	<button onclick="const kurang = function() {
+		const angka1 = prompt('Masukkan angka pertama:');
+		const angka2 = prompt('Masukkan angka kedua:');
+		const hasil = Number(angka1) - Number(angka2);
+		tampilPopUp(`Hasil pengurangan: ${hasil}`);
+	}; kurang();">Kurangkan</button>
+
+	<!--arrow function-->
+	<button onclick="const kali = () => {
+		const angka1 = prompt('Masukkan angka pertama:');
+		const angka2 = prompt('Masukkan angka kedua:');
+		const hasil = Number(angka1) * Number(angka2);
+		tampilPopUp(`Hasil perkalian: ${hasil}`);
+	}; kali();">Kalikan</button>
+
+
+
+	<script>
+		// fucntion untuk tambah
+		function tambah() {
+			const angka1 = prompt("Masukkan angka pertama:");
+			const angka2 = prompt("Masukkan angka kedua:");
+			const hasil = Number(angka1) + Number(angka2);
+			tampilPopUp(`Hasil penjumlahan: ${hasil}`);
+		}
+		// menampilkan hasil
+		function tampilPopUp(teks) {
+			const popUp = document.createElement("div");
+			popUp.textContent = teks;
+			popUp.style.backgroundColor = "yellow";
+			popUp.style.padding = "10px";
+			popUp.style.position = "fixed";
+			popUp.style.top = "50%";
+			popUp.style.left = "50%";
+			popUp.style.transform = "translate(-50%, -50%)";
+			document.body.appendChild(popUp);
+
+			setTimeout(() => {
+				popUp.remove();
+			}, 3000);
+		}
+
+		function tampilPopUp(teks) {
+			const popUp = document.createElement("div");
+			popUp.textContent = teks;
+			popUp.style.backgroundColor = "yellow";
+			popUp.style.padding = "10px";
+			popUp.style.position = "fixed";
+			popUp.style.top = "50%";
+			popUp.style.left = "50%";
+			popUp.style.transform = "translate(-50%, -50%)";
+			document.body.appendChild(popUp);
+
+			setTimeout(() => {
+				popUp.remove();
+			}, 3000);
+		}
+
+	</script>	
+</body>
+</html>
